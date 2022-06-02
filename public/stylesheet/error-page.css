@@ -1,0 +1,50 @@
+/* css for 404-page.html, 502-page.html */
+
+.content-container {
+	min-height: calc(100vh - 150px - var(--footerHeight) - 20px) !important;
+	width: 80%;
+}
+
+.error404Image img {
+	display: block;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+.error502Image img {
+	display: block;
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+.error404Title,
+.error502Title {
+	font-size: 175%;
+	text-align: center;
+}
+
+.error404Description,
+.error502Description {
+	text-align: center;
+}
+
+.error404Description a,
+.error404Description a:hover,
+.error502Description a,
+.error502Description a:hover {
+	color: var(--primaryColor);
+}
+
+@media handheld and (max-width: 576px),
+	screen and (max-device-width: 576px),
+	screen and (max-width: 576px) {
+	.error404Image img {
+		height: 225px;
+	}
+
+	.error502Image img {
+		height: 200px;
+	}
+}

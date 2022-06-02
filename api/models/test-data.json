@@ -1,0 +1,223 @@
+[
+	{
+		"user_role": {
+			"key": "USER",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"first_name": "Arthur",
+		"last_name": "Dent",
+		"gender": {
+			"key": "MALE",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"email": "arthur.dent@galaxy.com",
+		"phone_number": "+386 12 345 678",
+		"country": {
+			"name": "SLOVENIA",
+			"country": "SI",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"industry": [
+			{
+				"name": "SOFTWARE DEVELOPMENT",
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			}
+		],
+		"date_of_birth": "1972-12-24T00:00:00.000Z",
+		"resume": {
+			"about": "I am Arthur Dent, 20 years old computer and information science student, interested in computer communications, operating systems (Linux particular), computer vision, machine learning, decision problems, etc. In my free time, I like to play basketball, go hiking, play computer games and read science fiction books (The Hitchhiker’s Guide to the Galaxy fan club :D).",
+			"education": [
+				{
+					"key": "High School",
+					"description": "Šolski center Slovenske Konjice – Zreče, Gimnazija Slovenske Konjice",
+					"from": "2015-09-01T00:00:00.000Z",
+					"to": "2019-06-30T00:00:00.000Z"
+				},
+				{
+					"key": "University of Ljubljana",
+					"description": "Faculty of Computer and Information Science",
+					"from": "2019-10-01T00:00:00.000Z"
+				}
+			],
+			"experience": [
+				{
+					"company": "Bass",
+					"title": "Software Development Engineer Intern",
+					"description": [
+						"Getting to know and learn programming in Python, help on various projects."
+					],
+					"from": "2019-07-01T00:00:00.000Z",
+					"to": "2019-09-30T00:00:00.000Z"
+				},
+				{
+					"company": "NORIK SYSTEMS",
+					"description": [
+						"Internship on embedded development projects using Qt (C++), Yocto, git and Linux shell.",
+						"Designed and implemented full stack application using React, NestJS (TypeScript) and PostgreSQL."
+					],
+					"title": "Software Development",
+					"from": "2015-09-1T00:00:00.000Z"
+				}
+			],
+			"projects": [
+				{
+					"name": "Programming course",
+					"description": "Programming course for Java and Python programming language."
+				},
+				{
+					"name": "Reportko",
+					"description": "Application for writing and managing weekly reports (enterprise version in development)."
+				},
+				{
+					"name": "Galaxy Shell",
+					"description": "A simple Linux shell. It will soon be the default Linux shell XD."
+				}
+			],
+			"skills": [
+				{
+					"name": "Languages: Python, Java, MATLAB, JavaScript/TypeScript, HTML/CSS, SQL, C#, C, C++, Zsh, OCaml, Prolog"
+				},
+				{
+					"name": "Technology: Git, ORM/ODM, AWS, GCP, Azure, Docker, Nginx, Apache, Latex, Jira, Notion, Trello"
+				}
+			],
+			"other": [
+				{
+					"description": "Erasmus+: Participation in an Erasmus+ project about Brexit in England."
+				},
+				{
+					"description": "Hackathon: Participation in the largest online hackathon (EU vs Virus) in the world with the topic of Coronavirus."
+				}
+			],
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"random_value": "c871f5b490a250e3fa81a362bd9ecb06",
+		"hashed_value": "b0ebd21d0e70e74bb9c93afedd75373153171cb83e5ac5d516f20bffa4bb3df8decfcf67b0b8a739099c39ad0f236ffb633fbf261f91674f38be0749c6adbc67",
+		"created_at": "2021-11-27T22:25:55.123Z",
+		"updated_at": "2021-11-27T22:25:55.123Z"
+	},
+	{
+		"user_role": {
+			"key": "COMPANY",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"username": "Google",
+		"email": "info@google.com",
+		"phone_number": "+386 98 765 432",
+		"country": {
+			"name": "SLOVENIA",
+			"country": "SI",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"industry": [
+			{
+				"name": "SOFTWARE DEVELOPMENT",
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			},
+			{
+				"name": "EMBEDDED DEVELOPMENT",
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			}
+		],
+		"job_offers": [
+			{
+				"title": "Senior Full Stack developer",
+				"description": "Google helps companies around the world with development of the software and hardware for advanced, innovative and cost-effective products. Our customers come from a wide variety of industries from the automotive industry to the medical device industry. Due to the increased volume of work, we are looking for new experts to help us achieve our goals. The Full Stack team takes care of the planning, development and maintenance of web services or solutions. Team members work with members of other development teams or develop the entire solution themselves. Because our company offers services to different clients, the work of developers is very diverse and with that team members gain knowledge from different industries. In development, we follow the guidelines of agile methods of software development. Our solutions use technologies such as Node.js (specifically NestJS), Angular, React, React Native, Postgres, Redis, Minio, Docker and Firebase. We use Jira for scheduling tasks and recording time, and Confluence for documentation.",
+				"expectations": [
+					"knowledge of principles such as REST, MVC, OOP and CI / CD",
+					"minimum 3 years of experience in the development of back-end systems and web applications",
+					"knowledge of databases",
+					"knowledge of Docker architecture",
+					"desire to work in a team",
+					"assistance to other team members",
+					"desire for personal progress"
+				],
+				"other": "We offer work in a team of young developers who are eager to progress and strive to develop quality software solutions for customers around the world, work on interesting projects, a relaxed work environment with the possibility of personal and career growth in the company, competitive pay, office work in the center of Slovenske Konjice or from home, flexible working hours and many other benefits, such as participation in conferences abroad, teambuildings or weekend team vacations in remote Slovenian destinations.",
+				"active": true,
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			},
+			{
+				"title": "Junior front end dev",
+				"description": "Google helps companies around the world with development of the software and hardware for advanced, innovative and cost-effective products. Our customers come from a wide variety of industries from the automotive industry to the medical device industry. Due to the increased volume of work, we are looking for new experts to help us achieve our goals. The Full Stack team takes care of the planning, development and maintenance of web services or solutions. Team members work with members of other development teams or develop the entire solution themselves. Because our company offers services to different clients, the work of developers is very diverse and with that team members gain knowledge from different industries. In development, we follow the guidelines of agile methods of software development. Our solutions use technologies such as Node.js (specifically NestJS), Angular, React, React Native, Postgres, Redis, Minio, Docker and Firebase. We use Jira for scheduling tasks and recording time, and Confluence for documentation.",
+				"expectations": [
+					"Knowledge of html, js and css",
+					"Good colaboration with teammates"
+				],
+				"other": "We offer work in a team of young developers who are eager to progress and strive to develop quality software solutions for customers around the world, work on interesting projects, a relaxed work environment with the possibility of personal and career growth in the company, competitive pay, office work in the center of Slovenske Konjice or from home, flexible working hours and many other benefits, such as participation in conferences abroad, teambuildings or weekend team vacations in remote Slovenian destinations.",
+				"active": true,
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			}
+		],
+		"random_value": "eb8982ea1434f2e267bb55f318d56e51",
+		"hashed_value": "4e7c6e9ad5baea26229b15bffd39e6b2e9df19acb615532024beb68544029bf1e23fd801d32aea197553d3b31242622051c9b545d1b70c15f1a186c519199f57",
+		"created_at": "2021-11-27T22:25:55.123Z",
+		"updated_at": "2021-11-27T22:25:55.123Z"
+	},
+	{
+		"user_role": {
+			"key": "COMPANY",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"username": "Microsoft",
+		"email": "info@microsoft.com",
+		"phone_number": "+386 12 765 431",
+		"country": {
+			"name": "SLOVENIA",
+			"country": "SI",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"industry": [
+			{
+				"name": "SOFTWARE DEVELOPMENT",
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			},
+			{
+				"name": "EMBEDDED DEVELOPMENT",
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			}
+		],
+		"job_offers": [
+			{
+				"title": "Senior system engineer",
+				"description": "Microsoft makes operating system and is server provider with its Azure services",
+				"expectations": ["At least 10 years of OS design"],
+				"other": "Competitive salary",
+				"active": true,
+				"created_at": "2021-11-27T22:25:55.123Z",
+				"updated_at": "2021-11-27T22:25:55.123Z"
+			}
+		],
+		"random_value": "ecbd819923ca39c9446aeb11ef60ff4b",
+		"hashed_value": "dc0ab3948b0726a2cf83d85492cf2a52037511f8d2e0617da64f07966c67f9920dfc9e8fd431135fe1108523eeb9cbd63429eb95dc0895bdadd6ae5766264e00",
+		"created_at": "2021-11-27T22:25:55.123Z",
+		"updated_at": "2021-11-27T22:25:55.123Z"
+	},
+	{
+		"user_role": {
+			"key": "ADMIN",
+			"created_at": "2021-11-27T22:25:55.123Z",
+			"updated_at": "2021-11-27T22:25:55.123Z"
+		},
+		"username": "SystemAdmin",
+		"email": "admin@jobhub.com",
+		"random_value": "2946a9d686dd19f8f134f7813ac23d02",
+		"hashed_value": "555b143cc6a79a9ac6ca41d5c85deffb6f42a0fe0c0e20ad122c4f77f3ed3028bd0b9b7200c66abab13e48ebf2108719fd70cf562ef1476b6166a94f7e30967c",
+		"created_at": "2021-11-27T22:25:55.123Z",
+		"updated_at": "2021-11-27T22:25:55.123Z"
+	}
+]

@@ -1,0 +1,252 @@
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<title>Sign Up</title>
+
+		<link
+			rel='shortcut icon'
+			href='../../images/logo.ico'
+			type='image/x-icon'
+		/>
+
+		<link
+			href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'
+			rel='stylesheet'
+			integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3'
+			crossorigin='anonymous'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
+			integrity='sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=='
+			crossorigin='anonymous'
+			referrerpolicy='no-referrer'
+		/>
+
+		<link rel='stylesheet' type='text/css' href='../../stylesheet/style.css' />
+		<link
+			rel='stylesheet'
+			type='text/css'
+			href='../../stylesheet/sign-up.css'
+		/>
+
+		<script
+			src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
+			integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p'
+			crossorigin='anonymous'
+		></script>
+		<script
+			src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js'
+			integrity='sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=='
+			crossorigin='anonymous'
+			referrerpolicy='no-referrer'
+		></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<nav class='navbar navbar-expand-md navbar-light'>
+				<div class='container-md container-fluid'>
+					<a class='navbar-brand' href='/'><span class='logoTitleHeader'><img
+								src='../../images/logo.svg'
+								alt='logo'
+							/></span></a>
+				</div>
+			</nav>
+		</header>
+		<!-- Header -->
+
+		<!-- Container -->
+		<div class='container-md container-fluid content-container'>
+			<div class='row'>
+				<div
+					class='col-12 col-md-6 align-content-center pt-3 pb-3 pe-md-3 pe-xl-5 signUpUser'
+				>
+					<p class='signUpJoinAs'>Join as User</p>
+					<div class='text-center'>
+						<form method='post' autocomplete='off'>
+							<div class='row'>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label for='signUpUserInputFirstName' class='form-label'>First
+										name</label>
+									<input
+										type='text'
+										name='first_name'
+										class='form-control'
+										id='signUpUserInputFirstName'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label for='signUpUserInputLastName' class='form-label'>Last
+										name</label>
+									<input
+										type='text'
+										name='last_name'
+										class='form-control'
+										id='signUpUserInputLastName'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpUserInputEmail'
+										class='form-label'
+									>Email</label>
+									<input
+										type='email'
+										name='email'
+										class='form-control'
+										id='signUpUserInputEmail'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpUserInputIndustry'
+										class='form-label'
+									>Industry</label>
+									<input
+										type='text'
+										name='industry'
+										class='form-control'
+										id='signUpUserInputIndustry'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpUserInputPassword'
+										class='form-label'
+									>Password</label>
+									<input
+										type='password'
+										name='password'
+										class='form-control'
+										id='signUpUserInputPassword'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpUserInputConfirmPassword'
+										class='form-label'
+									>Confirm password</label>
+									<input
+										type='password'
+										name='password_confirm'
+										class='form-control'
+										id='signUpUserInputConfirmPassword'
+										required
+									/>
+								</div>
+								<div class='mb-4'>
+									<input type='hidden' name='user_role' value='USER' />
+									<button type='submit' class='submit btn btn-primary'>
+										Sign up as User
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div
+					class='col-12 col-md-6 align-content-center pt-3 pb-3 ps-md-3 ps-xl-5'
+				>
+					<p class='signUpJoinAs'>Join as Company</p>
+					<div class='text-center'>
+						<form method='post' autocomplete='off'>
+							<div class='row'>
+								<div class='mb-3 col-12'>
+									<label
+										for='signUpCompanyInputName'
+										class='form-label'
+									>Name</label>
+									<input
+										type='text'
+										name='username'
+										class='form-control'
+										id='signUpCompanyInputName'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpCompanyInputEmail'
+										class='form-label'
+									>Email</label>
+									<input
+										type='email'
+										name='email'
+										class='form-control'
+										id='signUpCompanyInputEmail'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpCompanyInputIndustry'
+										class='form-label'
+									>Industry</label>
+									<input
+										type='text'
+										name='industry'
+										class='form-control'
+										id='signUpCompanyInputIndustry'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpCompanyInputPassword'
+										class='form-label'
+									>Password</label>
+									<input
+										type='password'
+										name='password'
+										class='form-control'
+										id='signUpCompanyInputPassword'
+										required
+									/>
+								</div>
+								<div class='mb-3 col-12 col-lg-6'>
+									<label
+										for='signUpCompanyInputConfirmPassword'
+										class='form-label'
+									>Confirm password</label>
+									<input
+										type='password'
+										name='password_confirm'
+										class='form-control'
+										id='signUpCompanyInputConfirmPassword'
+										required
+									/>
+								</div>
+								<div class='mb-4'>
+									<input type='hidden' name='user_role' value='COMPANY' />
+									<button type='submit' class='submit btn btn-primary'>
+										Sign up as Company
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Container -->
+
+		<!-- Footer -->
+		<footer>
+			<a href='/'>
+				<span class='logoTitleFooter'><img
+						src='../../images/logo.svg'
+						alt='logo'
+					/></span></a>
+			&copy;{{getYear}}
+		</footer>
+		<!-- Footer -->
+	</body>
+</html>

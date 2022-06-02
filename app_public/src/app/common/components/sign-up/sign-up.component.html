@@ -1,0 +1,240 @@
+<div>
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container-md container-fluid">
+				<a class="navbar-brand" href="/"
+					><span class="logoTitleHeader"
+						><img src="../../../assets/images/logo.svg" alt="logo" /></span
+				></a>
+			</div>
+		</nav>
+	</header>
+	<!-- Header -->
+
+	<!-- Container -->
+	<div class="container-md container-fluid content-container">
+		<div class="row">
+			<div
+				class="
+					col-12 col-md-6
+					align-content-center
+					pt-3
+					pb-3
+					pe-md-3 pe-xl-5
+					signUpUser
+				"
+			>
+				<p class="signUpJoinAs">Join as User</p>
+				<div class="text-center">
+					<form method="post" autocomplete="off">
+						<div class="row">
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpUserInputFirstName" class="form-label"
+									>First name</label
+								>
+								<input
+									type="text"
+									#first_name
+									name="first_name"
+									required
+									class="form-control"
+									id="signUpUserInputFirstName"
+									[(ngModel)]="signUpDataUser.first_name"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpUserInputLastName" class="form-label"
+									>Last name</label
+								>
+								<input
+									type="text"
+									#last_name
+									name="last_name"
+									required
+									class="form-control"
+									id="signUpUserInputLastName"
+									[(ngModel)]="signUpDataUser.last_name"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpUserInputEmail" class="form-label"
+									>Email</label
+								>
+								<input
+									type="email"
+									#email
+									name="email"
+									required
+									class="form-control"
+									id="signUpUserInputEmail"
+									[(ngModel)]="signUpDataUser.email"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpUserInputIndustry" class="form-label"
+									>Industry</label
+								>
+								<input
+									type="text"
+									#industry
+									name="industry"
+									required
+									class="form-control"
+									id="signUpUserInputIndustry"
+									[(ngModel)]="signUpDataUser.industry"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpUserInputPassword" class="form-label"
+									>Password</label
+								>
+								<input
+									type="password"
+									#password
+									name="password"
+									required
+									class="form-control"
+									id="signUpUserInputPassword"
+									[(ngModel)]="signUpDataUser.password"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpUserInputConfirmPassword" class="form-label"
+									>Confirm password</label
+								>
+								<input
+									type="password"
+									#confirm_password
+									name="confirm_password"
+									required
+									class="form-control"
+									id="signUpUserInputConfirmPassword"
+									[(ngModel)]="signUpDataUser.confirm_password"
+									required
+								/>
+							</div>
+							<div class="mb-4">
+								<input type="hidden" name="user_role" value="USER" />
+								<button
+									type="submit"
+									class="submit btn btn-primary"
+									(click)="onSignUpUser()"
+									[disabled]="isDataUser()"
+								>
+									Sign up as User
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div
+				class="col-12 col-md-6 align-content-center pt-3 pb-3 ps-md-3 ps-xl-5"
+			>
+				<p class="signUpJoinAs">Join as Company</p>
+				<div class="text-center">
+					<form method="post" autocomplete="off">
+						<div class="row">
+							<div class="mb-3 col-12">
+								<label for="signUpCompanyInputName" class="form-label"
+									>Name</label
+								>
+								<input
+									type="text"
+									#username
+									name="username"
+									required
+									class="form-control"
+									id="signUpCompanyInputName"
+									[(ngModel)]="signUpDataCompany.company_name"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpCompanyInputEmail" class="form-label"
+									>Email</label
+								>
+								<input
+									type="email"
+									#email
+									name="email"
+									required
+									class="form-control"
+									id="signUpCompanyInputEmail"
+									[(ngModel)]="signUpDataCompany.email"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpCompanyInputIndustry" class="form-label"
+									>Industry</label
+								>
+								<input
+									type="text"
+									#industry
+									name="industry"
+									required
+									class="form-control"
+									id="signUpCompanyInputIndustry"
+									[(ngModel)]="signUpDataCompany.industry"
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label for="signUpCompanyInputPassword" class="form-label"
+									>Password</label
+								>
+								<input
+									type="password"
+									#password
+									name="password"
+									required
+									class="form-control"
+									id="signUpCompanyInputPassword"
+									[(ngModel)]="signUpDataCompany.password"
+									required
+								/>
+							</div>
+							<div class="mb-3 col-12 col-lg-6">
+								<label
+									for="signUpCompanyInputConfirmPassword"
+									class="form-label"
+									>Confirm password</label
+								>
+								<input
+									type="password"
+									#confirm_password
+									name="confirm_password"
+									required
+									class="form-control"
+									id="signUpCompanyInputConfirmPassword"
+									[(ngModel)]="signUpDataCompany.confirm_password"
+								/>
+							</div>
+							<div class="mb-4">
+								<input type="hidden" name="user_role" value="COMPANY" />
+								<button
+									type="submit"
+									class="submit btn btn-primary"
+									(click)="onSignUpCompany()"
+									[disabled]="isDataCompany()"
+								>
+									Sign up as Company
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Container -->
+
+	<!-- Footer -->
+	<footer>
+		<a href="./">
+			<span class="logoTitleFooter"
+				><img src="../../../assets/images/logo.svg" alt="logo" /></span
+		></a>
+		&copy;2021
+	</footer>
+	<!-- Footer -->
+</div>

@@ -1,0 +1,40 @@
+/* css for sign-up.html */
+
+.submit {
+	background: var(--primaryColor) !important;
+	width: 42%;
+	border: 0;
+	height: var(--standardHeight);
+	height: 100%;
+}
+
+.signUpUser {
+	border-right: 1px solid var(--borderColor);
+}
+
+.signUpJoinAs {
+	text-align: center;
+	font-size: 150%;
+	margin-bottom: 5%;
+}
+
+@media handheld and (max-width: 768px),
+	screen and (max-device-width: 768px),
+	screen and (max-width: 768px) {
+	form {
+		width: 420px;
+		margin: auto;
+	}
+
+	.signUpUser {
+		border-right: 0;
+	}
+}
+
+@media handheld and (max-width: 576px),
+	screen and (max-device-width: 576px),
+	screen and (max-width: 576px) {
+	form {
+		width: 80%;
+	}
+}

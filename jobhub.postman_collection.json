@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "f0ca41ee-e823-448f-95f5-442cce313e86",
+		"name": "jobhub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"arthur.dent@galaxy.com\",\n    \"password\": \"ArthurDent123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/sign-in",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Arthur\",\n    \"last_name\": \"Dent\",\n    \"email\": \"arthur.dent@galaxy.com\",\n    \"industry\": \"Software Development\",\n    \"password\": \"ArthurDent123\",\n    \"password_confirm\": \"ArhutrDent123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/sign-up-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sign-up-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Google\",\n    \"email\": \"info@google.com\",\n    \"industry\": \"Software Development\",\n    \"password\": \"GoogleJobHub\",\n    \"password_confirm\": \"GoogleJobHub\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/sign-up-company",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sign-up-company"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Company Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ5ZjU0MjRhNTRjNzNmMTFhY2EwOGEiLCJlbWFpbCI6ImluZm9AZ29vZ2xlLmNvbSIsInVzZXJfcm9sZSI6IkNPTVBBTlkiLCJleHAiOjE2NDIyNzg4NTAsImlhdCI6MTY0MTY3NDA1MH0.xn0TyCWt5-4oTnz8GTaH-7nIi6FQnzEE-k0xkea2F0M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Google\",\n    \"email\": \"info@google.com\",\n    \"phone_number\": \"+386 12 345 678\",\n    \"industry\": \"SOFTWARE DEVELOPMENT\",\n    \"country\": \"SLOVENIA\",\n    \"new_password\": \"Google@JobHub123\",\n    \"new_password_confirm\": \"Google@JobHub123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/company-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ5ZjViYzY1OTJlNzU0ODQ3ZjJlMzYiLCJlbWFpbCI6ImFydGh1ci5kZW50QGdhbGF4eS5jb20iLCJ1c2VyX3JvbGUiOiJVU0VSIiwiZXhwIjoxNjQyMjc4OTcyLCJpYXQiOjE2NDE2NzQxNzJ9.HdWx1mznsoUtjkCsS0i9MMMVxiQBos2A-FJhFJNviLg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Arthur\",\n    \"last_name\": \"Dent\",\n    \"email\": \"arthur.dent@galaxy.com\",\n    \"gender\": \"MALE\",\n    \"date_of_birth\": \"1972-12-24\",\n    \"phone_number\": \"+386 12 345 678\",\n    \"industry\": \"SOFTWARE DEVELOPMENT\",\n    \"country\": \"SLOVENIA\",\n    \"new_password\": \"ArthurDent123\",\n    \"new_password_confirm\": \"ArthurDent123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Database",
+			"item": [
+				{
+					"name": "Insert Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImVtYWlsIjoiYWRtaW5Aam9iaHViLmNvbSIsInVzZXJfcm9sZSI6IkFETUlOIiwiZXhwIjoxNjQyMjc1OTQ4LCJpYXQiOjE2NDE2NzExNDh9.X9YHsmrLI4VjPNup1VF8c3p2AhaVZQT43lRluatrwSE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"user_role\": {\n\t\t\t\"key\": \"USER\",\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"first_name\": \"Arthur\",\n\t\t\"last_name\": \"Dent\",\n\t\t\"gender\": {\n\t\t\t\"key\": \"MALE\",\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"email\": \"arthur.dent@galaxy.com\",\n\t\t\"phone_number\": \"+386 12 345 678\",\n\t\t\"country\": {\n\t\t\t\"name\": \"SLOVENIA\",\n\t\t\t\"country\": \"SI\",\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"industry\": [\n\t\t\t{\n\t\t\t\t\"name\": \"SOFTWARE DEVELOPMENT\",\n\t\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t\t}\n\t\t],\n\t\t\"date_of_birth\": \"1972-12-24T00:00:00.000Z\",\n\t\t\"resume\": {\n\t\t\t\"about\": \"I am Arthur Dent, 20 years old computer and information science student, interested in computer communications, operating systems (Linux particular), computer vision, machine learning, decision problems, etc. In my free time, I like to play basketball, go hiking, play computer games and read science fiction books (The Hitchhiker’s Guide to the Galaxy fan club :D).\",\n\t\t\t\"education\": [\n\t\t\t\t{\n\t\t\t\t\t\"key\": \"High School\",\n\t\t\t\t\t\"description\": \"Šolski center Slovenske Konjice – Zreče, Gimnazija Slovenske Konjice\",\n\t\t\t\t\t\"from\": \"2015-09-01T00:00:00.000Z\",\n\t\t\t\t\t\"to\": \"2019-06-30T00:00:00.000Z\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"key\": \"University of Ljubljana\",\n\t\t\t\t\t\"description\": \"Faculty of Computer and Information Science\",\n\t\t\t\t\t\"from\": \"2019-10-01T00:00:00.000Z\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"experience\": [\n\t\t\t\t{\n\t\t\t\t\t\"company\": \"Bass\",\n\t\t\t\t\t\"title\": \"Software Development Engineer Intern\",\n\t\t\t\t\t\"description\": [\n\t\t\t\t\t\t\"Getting to know and learn programming in Python, help on various projects.\"\n\t\t\t\t\t],\n\t\t\t\t\t\"from\": \"2019-07-01T00:00:00.000Z\",\n\t\t\t\t\t\"to\": \"2019-09-30T00:00:00.000Z\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"company\": \"NORIK SYSTEMS\",\n\t\t\t\t\t\"description\": [\n\t\t\t\t\t\t\"Internship on embedded development projects using Qt (C++), Yocto, git and Linux shell.\",\n\t\t\t\t\t\t\"Designed and implemented full stack application using React, NestJS (TypeScript) and PostgreSQL.\"\n\t\t\t\t\t],\n\t\t\t\t\t\"title\": \"Software Development\",\n\t\t\t\t\t\"from\": \"2015-09-1T00:00:00.000Z\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"projects\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Programming course\",\n\t\t\t\t\t\"description\": \"Programming course for Java and Python programming language.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Reportko\",\n\t\t\t\t\t\"description\": \"Application for writing and managing weekly reports (enterprise version in development).\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Galaxy Shell\",\n\t\t\t\t\t\"description\": \"A simple Linux shell. It will soon be the default Linux shell XD.\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"skills\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Languages: Python, Java, MATLAB, JavaScript/TypeScript, HTML/CSS, SQL, C#, C, C++, Zsh, OCaml, Prolog\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Technology: Git, ORM/ODM, AWS, GCP, Azure, Docker, Nginx, Apache, Latex, Jira, Notion, Trello\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"other\": [\n\t\t\t\t{\n\t\t\t\t\t\"description\": \"Erasmus+: Participation in an Erasmus+ project about Brexit in England.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"description\": \"Hackathon: Participation in the largest online hackathon (EU vs Virus) in the world with the topic of Coronavirus.\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"random_value\": \"c871f5b490a250e3fa81a362bd9ecb06\",\n\t\t\"hashed_value\": \"b0ebd21d0e70e74bb9c93afedd75373153171cb83e5ac5d516f20bffa4bb3df8decfcf67b0b8a739099c39ad0f236ffb633fbf261f91674f38be0749c6adbc67\",\n\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t},\n\t{\n\t\t\"user_role\": {\n\t\t\t\"key\": \"COMPANY\",\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"username\": \"Google\",\n\t\t\"email\": \"info@google.com\",\n\t\t\"phone_number\": \"+386 98 765 432\",\n\t\t\"country\": {\n\t\t\t\"name\": \"SLOVENIA\",\n\t\t\t\"country\": \"SI\",\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"industry\": [\n\t\t\t{\n\t\t\t\t\"name\": \"SOFTWARE DEVELOPMENT\",\n\t\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"EMBEDDED DEVELOPMENT\",\n\t\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t\t}\n\t\t],\n\t\t\"job_offers\": [\n\t\t\t{\n\t\t\t\t\"title\": \"Senior Full Stack developer\",\n\t\t\t\t\"description\": \"Google helps companies around the world with development of the software and hardware for advanced, innovative and cost-effective products. Our customers come from a wide variety of industries from the automotive industry to the medical device industry. Due to the increased volume of work, we are looking for new experts to help us achieve our goals. The Full Stack team takes care of the planning, development and maintenance of web services or solutions. Team members work with members of other development teams or develop the entire solution themselves. Because our company offers services to different clients, the work of developers is very diverse and with that team members gain knowledge from different industries. In development, we follow the guidelines of agile methods of software development. Our solutions use technologies such as Node.js (specifically NestJS), Angular, React, React Native, Postgres, Redis, Minio, Docker and Firebase. We use Jira for scheduling tasks and recording time, and Confluence for documentation.\",\n\t\t\t\t\"expectations\": [\n\t\t\t\t\t\"knowledge of principles such as REST, MVC, OOP and CI / CD\",\n\t\t\t\t\t\"minimum 3 years of experience in the development of back-end systems and web applications\",\n\t\t\t\t\t\"knowledge of databases\",\n\t\t\t\t\t\"knowledge of Docker architecture\",\n\t\t\t\t\t\"desire to work in a team\",\n\t\t\t\t\t\"assistance to other team members\",\n\t\t\t\t\t\"desire for personal progress\"\n\t\t\t\t],\n\t\t\t\t\"other\": \"We offer work in a team of young developers who are eager to progress and strive to develop quality software solutions for customers around the world, work on interesting projects, a relaxed work environment with the possibility of personal and career growth in the company, competitive pay, office work in the center of Slovenske Konjice or from home, flexible working hours and many other benefits, such as participation in conferences abroad, teambuildings or weekend team vacations in remote Slovenian destinations.\",\n\t\t\t\t\"active\": true,\n\t\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t\t}\n\t\t],\n\t\t\"password\": \"GoogleJobHub\",\n\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t},\n\t{\n\t\t\"user_role\": {\n\t\t\t\"key\": \"ADMIN\",\n\t\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t\t},\n\t\t\"username\": \"SystemAdmin\",\n\t\t\"email\": \"admin@jobhub.com\",\n\t\t\"random_value\": \"eb8982ea1434f2e267bb55f318d56e51\",\n\t\t\"hashed_value\": \"4e7c6e9ad5baea26229b15bffd39e6b2e9df19acb615532024beb68544029bf1e23fd801d32aea197553d3b31242622051c9b545d1b70c15f1a186c519199f57\",\n\t\t\"created_at\": \"2021-11-27T22:25:55.123Z\",\n\t\t\"updated_at\": \"2021-11-27T22:25:55.123Z\"\n\t}\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/db-insert",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"db-insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImVtYWlsIjoiYWRtaW5Aam9iaHViLmNvbSIsInVzZXJfcm9sZSI6IkFETUlOIiwiZXhwIjoxNjQyMjc1OTQ4LCJpYXQiOjE2NDE2NzExNDh9.X9YHsmrLI4VjPNup1VF8c3p2AhaVZQT43lRluatrwSE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/db-delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"db-delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,5 @@
+.signOut {
+	background: var(--primaryColor) !important;
+	border: 0;
+	height: var(--standardHeight);
+}

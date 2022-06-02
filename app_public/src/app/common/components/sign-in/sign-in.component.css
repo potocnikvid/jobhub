@@ -1,0 +1,78 @@
+/* css for sign-in.html */
+
+form,
+.signInOr,
+.signInJoinWith {
+	width: 420px;
+	margin: auto;
+}
+
+.submit {
+	background: var(--primaryColor) !important;
+	width: 50%;
+	border: 0;
+	height: var(--standardHeight);
+	height: 100%;
+}
+
+.joinGoogle,
+.joinApple,
+.joinFacebook {
+	font-weight: bold;
+	width: 100%;
+	border: 0;
+	height: var(--standardHeight);
+}
+
+.joinGoogle {
+	background: transparent !important;
+	border: 1px solid var(--borderColor);
+	color: var(--primaryFontColor);
+}
+
+.joinApple {
+	background: black !important;
+	color: white;
+	border: 0;
+}
+
+.joinFacebook {
+	background: #3b5998 !important;
+	color: white;
+	border: 0;
+}
+
+.joinGoogle:hover,
+.joinGoogle:active,
+.joinGoogle:focus {
+	background: #e2e2e2 !important;
+	border: 0;
+	color: var(--primaryFontColor);
+	box-shadow: none !important;
+}
+
+.joinApple:hover,
+.joinApple:active,
+.joinApple:focus {
+	background: #333 !important;
+	box-shadow: none !important;
+	color: white;
+}
+
+.joinFacebook:hover,
+.joinFacebook:active,
+.joinFacebook:focus {
+	background: #3a61b3 !important;
+	box-shadow: none !important;
+	color: white;
+}
+
+@media handheld and (max-width: 576px),
+	screen and (max-device-width: 576px),
+	screen and (max-width: 576px) {
+	form,
+	.signInOr,
+	.signInJoinWith {
+		width: 80%;
+	}
+}

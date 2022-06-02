@@ -1,0 +1,126 @@
+<div>
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container-md container-fluid">
+				<a class="navbar-brand" href="/"
+					><span class="logoTitleHeader"
+						><img src="../../../assets/images/logo.svg" alt="logo" /></span
+				></a>
+			</div>
+		</nav>
+	</header>
+	<!-- Header -->
+
+	<!-- Container -->
+	<div class="container-md container-fluid content-container">
+		<div class="row">
+			<div class="col-12 align-content-center pt-3 pb-3">
+				<div class="text-center">
+					<form method="post" autocomplete="off">
+						<div class="mb-3">
+							<label for="indexInputEmail" class="form-label">Email</label>
+							<input
+								type="email"
+								name="email"
+								class="form-control"
+								id="indexInputEmail"
+								[(ngModel)]="signInData.email"
+								required
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="signInInputPassword1" class="form-label"
+								>Password</label
+							>
+							<input
+								type="password"
+								name="password"
+								class="form-control"
+								id="signInInputPassword1"
+								[(ngModel)]="signInData.password"
+								required
+							/>
+						</div>
+						<div class="mb-4">
+							<button
+								type="submit"
+								id="cfa-signin"
+								class="submit btn btn-primary"
+								(click)="onSignIn()"
+							>
+								Sign in
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="text-center signInOr">
+					<div class="row">
+						<div class="col-5">
+							<hr />
+						</div>
+						<div class="col-2">or</div>
+						<div class="col-5">
+							<hr />
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center signInJoinWith">
+					<div class="mt-4">
+						<a
+							class="joinOther joinGoogle btn btn-primary"
+							href="#"
+							role="button"
+							><i class="fab fa-google me-3"></i> Join with Google</a
+						>
+					</div>
+					<div class="mt-3">
+						<a
+							class="joinOther joinApple btn btn-primary"
+							href="#"
+							role="button"
+							><i class="fab fa-apple me-3"></i> Join with Apple</a
+						>
+					</div>
+					<div class="mt-3 mb-4">
+						<a
+							class="joinOther joinFacebook btn btn-primary"
+							href="#"
+							role="button"
+							><i class="fab fa-facebook me-3"></i> Join with Facebook</a
+						>
+					</div>
+				</div>
+
+				<div class="text-center signInOr">
+					<hr />
+				</div>
+
+				<div class="text-center signInOr">
+					<div>
+						<p>Don't have account? Join now!</p>
+					</div>
+					<div class="mt-3">
+						<a class="submit btn btn-primary" href="sign-up" role="button"
+							>Sign up</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Container -->
+
+	<!-- Footer -->
+	<footer>
+		<a href="./">
+			<span class="logoTitleFooter"
+				><img src="../../../assets/images/logo.svg" alt="logo" /></span
+		></a>
+		&copy;
+	</footer>
+	<!-- Footer -->
+	<script src="../../../../assets/scripts/sign-in.js" defer></script>
+</div>

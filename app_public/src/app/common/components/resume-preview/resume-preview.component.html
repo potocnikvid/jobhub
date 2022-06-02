@@ -1,0 +1,298 @@
+<div>
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="./user-main"
+					><span class="logoTitleHeader"
+						><img src="../../../assets/images/logo.svg" alt="logo" /></span
+				></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a class="nav-link" href="./resume-preview" aria-current="page"
+								><b>Edit resume</b></a
+							>
+						</li>
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a class="nav-link" href="./user-profile" aria-current="page"
+								><b>Profile</b></a
+							>
+						</li>
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a href="./" (click)="onSignOut()" class="signOut btn btn-primary"
+								>Sign Out</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Header -->
+
+	<div class="container input-form">
+		<form>
+			<div class="row">
+				<div class="col-md-4 mb-3">
+					<label for="name" class="form-label">First name</label>
+					<input
+						[placeholder]="user.first_name"
+						disabled="true"
+						id="first-name"
+						name="firstName"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="last-name" class="form-label">Last name</label>
+					<input
+						[placeholder]="user.last_name"
+						disabled="true"
+						id="last-name"
+						name="lastName"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="gender" class="form-label">Gender</label>
+					<input
+						[placeholder]="user.gender"
+						disabled="true"
+						id="gender"
+						name="gender"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-3">
+					<label for="email" class="form-label">E-mail</label>
+					<input
+						id="email"
+						name="email"
+						[placeholder]="user.email"
+						disabled="true"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="phone" class="form-label">Phone number</label>
+					<input
+						id="phone"
+						name="phone"
+						[placeholder]="user.phone"
+						disabled="true"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="country" class="form-label">Country</label>
+					<input
+						id="country"
+						name="country"
+						[placeholder]="user.country"
+						disabled="true"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>About <span class="small-text"></span
+					></label>
+					<textarea
+						ng-model="about"
+						required
+						id="about"
+						name="about"
+						rows="4"
+						class="form-control"
+						ng-init="other= 'initvalue'"
+						[(ngModel)]="resume.about"
+						>{{ resume.about }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Education
+						<span class="small-text">(separated by semicolon)</span></label
+					>
+					<textarea
+						ng-model="education"
+						required
+						id="education"
+						name="education"
+						rows="2"
+						type="text"
+						class="form-control"
+						[(ngModel)]="resume.education"
+						>{{ resume.education }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Experience
+						<span class="small-text">(separated by semicolon)</span></label
+					>
+					<textarea
+						ng-model="experience"
+						required
+						id="experience"
+						name="experience"
+						rows="2"
+						type="text"
+						class="form-control"
+						[(ngModel)]="resume.experience"
+						>{{ resume.experience }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Projects
+						<span class="small-text">(separated by semicolon)</span></label
+					>
+					<textarea
+						ng-model="projects"
+						required
+						id="projects"
+						name="projects"
+						rows="2"
+						type="text"
+						class="form-control"
+						[(ngModel)]="resume.projects"
+						>{{ resume.projects }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Skills
+						<span class="small-text">(separated by semicolon)</span></label
+					>
+					<textarea
+						ng-model="skills"
+						required
+						id="skills"
+						name="skills"
+						rows="2"
+						type="text"
+						class="form-control"
+						[(ngModel)]="resume.skills"
+						>{{ resume.skills }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Other
+						<span class="small-text">(separated by semicolon)</span></label
+					>
+					<textarea
+						ng-model="other"
+						required
+						id="other"
+						name="other"
+						rows="2"
+						type="text"
+						class="form-control"
+						[(ngModel)]="resume.other"
+						>{{ resume.other }}</textarea
+					>
+				</div>
+				<div class="col-md-12">
+					<button
+						id="generateResume"
+						type="button"
+						class="btn btn-primary"
+						(click)="submit()"
+					>
+						Generate CV
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="preview-boxes container">
+		<div class="container">
+			<div class="row cv-preview-box-1">
+				<div class="col-md-6 poster-contact">
+					<div>
+						<p>Name</p>
+						<h4>{{ user.first_name }} {{ user.last_name }}</h4>
+					</div>
+					<div>
+						<p>Gender</p>
+						<h4>{{ user.gender }}</h4>
+					</div>
+					<div>
+						<p>Email</p>
+						<h4>{{ user.email }}</h4>
+					</div>
+					<div>
+						<p>Phone number</p>
+						<h4>{{ user.phone }}</h4>
+					</div>
+					<div>
+						<p>Country</p>
+						<h4>{{ user.country }}</h4>
+					</div>
+				</div>
+				<div class="col-md-6 cv-preview-box-2">
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>About</strong></label>
+						<p>{{ resume.about }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Education</strong></label>
+						<p>{{ resume.education }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Experience</strong></label>
+						<p>{{ resume.experience }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Projects</strong></label>
+						<p>{{ resume.projects }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Skills</strong></label>
+						<p>{{ resume.skills }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Other</strong></label>
+						<p>{{ resume.other }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<a href="./user-main">
+			<span class="logoTitleFooter"
+				><img src="../../../assets/images/logo.svg" alt="logo" /></span
+		></a>
+		&copy;2021
+	</footer>
+	<!-- Footer -->
+	<script src="../../../../assets/scripts/resume-preview.js" defer></script>
+</div>

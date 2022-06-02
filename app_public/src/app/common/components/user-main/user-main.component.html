@@ -1,0 +1,110 @@
+<div>
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="./user-main"
+					><span class="logoTitleHeader"
+						><img src="../../../assets/images/logo.svg" alt="logo" /></span
+				></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a class="nav-link" href="./resume-preview" aria-current="page"
+								><b>Edit resume</b></a
+							>
+						</li>
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a class="nav-link" href="./user-profile" aria-current="page"
+								><b>Profile</b></a
+							>
+						</li>
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a href="./" (click)="onSignOut()" class="signOut btn btn-primary"
+								>Sign Out</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Header -->
+
+	<div class="container main-container-outer">
+		<div class="row main-container">
+			<div class="side-window col-md-1">
+				<button class="main-button" (click)="onDecline()">
+					<i class="fas fa-times-circle fa-3x"></i>
+				</button>
+			</div>
+			<div class="central-window col-md-10">
+				<div class="fluid-container full-height">
+					<div class="row full-height">
+						<div class="poster-contact col-md-6">
+							<div>
+								<p>Company name</p>
+								<h4>{{company}}</h4>
+							</div>
+							<div>
+								<p>Email</p>
+								<h4>{{email}}</h4>
+							</div>
+							<div>
+								<p>Phone number</p>
+								<h4>{{phone}}</h4>
+							</div>
+							<div>
+								<p>Country</p>
+								<h4>{{country}}</h4>
+							</div>
+						</div>
+						<div class="job-description col-md-6">
+							<h5>{{title}}</h5>
+							<p id="title-desc">Description</p>
+							<p id="description">
+								{{description}}
+							</p>
+							<p id="title-expectations">Expectations</p>
+							<p id="expectations">
+								{{expectations}}
+							</p>
+							<p id="title-other">Other</p>
+							<p id="other">
+								{{other}}
+							</p>
+							<p id="fail" style="display: none">No more job offers to show!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="side-window col-md-1">
+				<button class="main-button" (click)="onAccept()">
+					<i class="fas fa-check-circle fa-3x"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<a href="./user-main">
+			<span class="logoTitleFooter"
+				><img src="../../../assets/images/logo.svg" alt="logo" /></span
+		></a>
+		&copy;2021
+	</footer>
+	<!-- Footer -->
+	<script src="../../../../assets/scripts/main-page.js" defer></script>
+</div>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Message</title>
+
+		<link
+			rel="shortcut icon"
+			href="../../images/logo.ico"
+			type="image/x-icon"
+		/>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="../../styles/style.css" />
+		<link rel="stylesheet" href="../../styles/user-message-page.css" />
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+			integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+	</head>
+
+	<body>
+		<!-- Header -->
+		<header>
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container">
+					<a class="navbar-brand" href="../main/user-main.html"
+						><span class="logoTitleHeader"
+							><img src="../../images/logo.svg" alt="logo" /></span
+					></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item ms-3 mb-2 mb-lg-0">
+								<a
+									class="nav-link"
+									href="../user-profile/user-profile.html"
+									aria-current="page"
+									>Profile</a
+								>
+							</li>
+							<li class="nav-item ms-3 mb-2 mb-lg-0">
+								<a href=""
+									><button class="signOut btn btn-primary">Sign out</button></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- Header -->
+
+		<!-- Chat-App -->
+		<div class="container-md container-fluid chat-app">
+			<div class="row mt-md-3">
+				<!-- Search-Panel -->
+				<div class="col-md-6 col-xl-4">
+					<div id="jobs-list" class="jobs-list">
+						<div class="input-group">
+							<input
+								type="search"
+								class="form-control"
+								placeholder="Search"
+								aria-label="Search"
+								aria-describedby="search-addon"
+							/>
+							<span class="input-group-text">
+								<i class="fas fa-search"></i>
+							</span>
+						</div>
+
+						<!-- Jobs List -->
+						<div class="list-group chat-list">
+							<div class="list-group-item mt-1 active">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://www.agilcon.com/wp-content/uploads/2018/10/cropped-favicon_Agilcon.png"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">Back-end in Full-stack programer</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Agilcon</div>
+										<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://media-exp1.licdn.com/dms/image/C560BAQEdFdkKF3r3RA/company-logo_200_200/0/1544594735517?e=2159024400&v=beta&t=vXnY2_NCCku78hfG9G5DhAUX7A_R5-gl1JGIM2mEX18"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">C# programmer</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Saop Slovenia</div>
+										<div class="mb-1 h6">
+											Sempeter pri Gorici, Slovenia<br />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://pbs.twimg.com/profile_images/1060160946214187009/ehe_f3rq_400x400.jpg"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">Symfony Developer - Full Stack</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Flaviar</div>
+										<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="data:image/jpeg;base64,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"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">Junior Software Developer</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Adacta</div>
+										<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://qph.fs.quoracdn.net/main-qimg-6c062adcbace942e5c2a2ea3ec7caf5a-lq"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">
+												Job opportunities in Quality (m/f/d)
+											</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Novartis</div>
+										<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://www.agilcon.com/wp-content/uploads/2018/10/cropped-favicon_Agilcon.png"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">Back-end in Full-stack programer</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Agilcon</div>
+										<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://media-exp1.licdn.com/dms/image/C560BAQEdFdkKF3r3RA/company-logo_200_200/0/1544594735517?e=2159024400&v=beta&t=vXnY2_NCCku78hfG9G5DhAUX7A_R5-gl1JGIM2mEX18"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">C# programmer</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Saop Slovenia</div>
+										<div class="mb-1 h6">
+											Sempeter pri Gorici, Slovenia<br />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item mt-1">
+								<div class="row">
+									<div class="col-2">
+										<img
+											src="https://pbs.twimg.com/profile_images/1060160946214187009/ehe_f3rq_400x400.jpg"
+											alt="avatar"
+										/>
+									</div>
+									<div class="col-10">
+										<div class="mb-1 h5 d-flex w-100 justify-content-between">
+											<div class="name">Symfony Developer - Full Stack</div>
+											<div class="last-interaction text-muted h6">
+												5 days ago
+											</div>
+										</div>
+										<div class="mb-1 h6">Flaviar</div>
+										<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Jobs List -->
+					</div>
+				</div>
+				<!-- Search-Panel -->
+
+				<!-- Chat -->
+				<div class="col-md-6 col-xl-8">
+					<div class="chat">
+						<!-- Chat Header -->
+						<div class="chat-header clearfix">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="list-group-item mt-1">
+										<div class="row">
+											<div class="col-2">
+												<img
+													src="https://www.agilcon.com/wp-content/uploads/2018/10/cropped-favicon_Agilcon.png"
+													alt="avatar"
+												/>
+											</div>
+											<div class="col-10">
+												<div
+													class="mb-1 h5 d-flex w-100 justify-content-between"
+												>
+													<div class="name">
+														Back-end in Full-stack programer
+													</div>
+													<div class="last-interaction text-muted h6">
+														5 days ago
+													</div>
+												</div>
+												<div class="mb-1 h6">Agilcon</div>
+												<div class="mb-1 h6">Ljubljana, Slovenia<br /></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Chat Header -->
+
+						<!-- Chat History -->
+						<div class="chat-history">
+							<ul class="mb-0 p-0">
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 pe-2 text-end">
+										<span class="message-data-time">10:10 AM, Today</span>
+									</div>
+									<div class="message p-3 my-message float-end">
+										Hi Dilan, how are you? How is the project coming along?
+									</div>
+								</li>
+
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 ps-2 text-start">
+										<span class="message-data-time">10:12 AM, Today</span>
+									</div>
+									<div class="message p-3 other-message">
+										Are we meeting today?
+									</div>
+								</li>
+
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 pe-2 text-end">
+										<span class="message-data-time">10:15 AM, Today</span>
+									</div>
+									<div class="message p-3 my-message float-end">
+										Project has been already finished and I have results to show
+										you.Project has been already finished and I have results to
+										show you.
+									</div>
+								</li>
+
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 pe-2 text-end">
+										<span class="message-data-time">10:10 AM, Today</span>
+									</div>
+									<div class="message p-3 my-message float-end">
+										Hi Dilan, how are you? How is the project coming along? Hi
+										Dilan, how are you? How is the project coming along?Hi
+										Dilan, how are you? How is the project coming along?
+									</div>
+								</li>
+
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 ps-2 text-start">
+										<span class="message-data-time">10:12 AM, Today</span>
+									</div>
+									<div class="message p-3 other-message">
+										Are we meeting today?
+									</div>
+								</li>
+
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 ps-2 text-start">
+										<span class="message-data-time">10:15 AM, Today</span>
+									</div>
+									<div class="message p-3 other-message">
+										Project has been already finished and I have results to show
+										you.Project has been already finished and I have results to
+										show you.
+									</div>
+								</li>
+
+								<li class="clearfix mb-4">
+									<div class="message-data mb-1 pe-2 text-end">
+										<span class="message-data-time">10:10 AM, Today</span>
+									</div>
+									<div class="message p-3 my-message float-end">
+										Hi Dilan, how are you? How is the project coming along? Hi
+										Dilan, how are you? How is the project coming along?Hi
+										Dilan, how are you? How is the project coming along?
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- Chat History -->
+
+						<!-- Chat Input -->
+						<div class="row">
+							<div class="col-10">
+								<div class="chat-message clearfix">
+									<div class="input-group">
+										<span class="input-group-text">
+											<i class="fas fa-chevron-right"></i>
+										</span>
+										<textarea
+											class="form-control"
+											aria-label="With textarea"
+											rows="4"
+										></textarea>
+									</div>
+								</div>
+							</div>
+
+							<!-- Chat Icons -->
+							<div class="col-2">
+								<div class="chat-footer">
+									<div class="row my-2">
+										<button class="chatIcons btn btn-primary">
+											<i class="fas fa-images"></i>
+										</button>
+									</div>
+									<div class="row my-2">
+										<button class="chatIcons btn btn-primary">
+											<i class="fas fa-file"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- Chat Icons -->
+						</div>
+						<!-- Chat Input -->
+					</div>
+				</div>
+				<!-- Chat -->
+			</div>
+		</div>
+		<!-- Chat-App -->
+
+		<!-- Footer -->
+		<footer>
+			<a href="../main/user-main.html">
+				<span class="logoTitleFooter"
+					><img src="../../images/logo.svg" alt="logo" /></span
+			></a>
+			&copy;2021
+		</footer>
+		<!-- Footer -->
+	</body>
+</html>

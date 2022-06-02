@@ -1,0 +1,130 @@
+/* css for index.html */
+
+body {
+	overflow-x: hidden;
+}
+
+form,
+.indexOrJoinNow {
+	width: 420px;
+}
+
+.submit {
+	background: var(--primaryColor) !important;
+	width: 50%;
+	border: 0;
+	height: var(--standardHeight);
+	height: 100%;
+}
+
+.content-container {
+	min-height: calc(1321px) !important;
+}
+
+.backgroundImage {
+	position: absolute;
+	right: 42px;
+	top: 100px;
+	z-index: -1;
+}
+
+.heading {
+	font-size: 350%;
+	text-align: right;
+	color: var(--primaryColor);
+}
+
+.heading b {
+	color: var(--secondaryColor);
+}
+
+.heading p {
+	margin: auto;
+	padding-top: 50px;
+	width: 80%;
+}
+
+@media handheld and (max-width: 1370px),
+	screen and (max-device-width: 1370px),
+	screen and (max-width: 1370px) {
+	body {
+		position: relative;
+	}
+
+	.backgroundImage {
+		right: -170px;
+		top: 100px;
+	}
+}
+
+@media handheld and (max-width: 1400px),
+	screen and (max-device-width: 1400px),
+	screen and (max-width: 1400px) {
+	.heading {
+		font-size: 325%;
+	}
+
+	.heading p {
+		padding-top: 15px;
+	}
+}
+
+@media handheld and (max-width: 992px),
+	screen and (max-device-width: 992px),
+	screen and (max-width: 992px) {
+	form,
+	.indexOrJoinNow {
+		margin: auto;
+	}
+
+	.heading {
+		font-size: 300%;
+	}
+
+	.heading p {
+		width: 60%;
+		margin: auto;
+	}
+
+	.heading {
+		text-align: center;
+	}
+
+	.backgroundImage {
+		right: -170px;
+	}
+}
+
+@media handheld and (max-width: 768px),
+	screen and (max-device-width: 768px),
+	screen and (max-width: 768px) {
+	.heading p {
+		width: 90%;
+	}
+
+	.heading {
+		width: 420px;
+		margin: auto;
+	}
+
+	.backgroundImage {
+		right: -170px;
+	}
+}
+
+@media handheld and (max-width: 700px),
+	screen and (max-device-width: 700px),
+	screen and (max-width: 700px) {
+	.backgroundImage {
+		display: none;
+	}
+}
+
+@media handheld and (max-width: 576px),
+	screen and (max-device-width: 576px),
+	screen and (max-width: 576px) {
+	form,
+	.indexOrJoinNow {
+		width: 85%;
+	}
+}

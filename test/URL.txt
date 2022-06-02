@@ -1,0 +1,10 @@
+http://localhost:3000/
+http://localhost:3000/sign-in
+http://localhost:3000/sign-up-user
+http://localhost:3000/sign-up-company
+http://localhost:3000/token-decode
+http://localhost:3000/admin-dashboard
+http://localhost:3000/resume-preview
+http://localhost:3000/job-preview
+
+

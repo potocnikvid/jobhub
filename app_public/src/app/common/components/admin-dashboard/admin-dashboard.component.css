@@ -1,0 +1,32 @@
+.content {
+	display: block;
+	width: 100%;
+}
+
+a {
+	color: var(--textColor);
+	text-decoration: none;
+}
+.signout {
+	background-color: var(--primaryColor);
+	color: var(--secondaryFontColor);
+	border-radius: 4px;
+}
+
+.background {
+	background-color: var(--primaryColor);
+	border-color: var(--primaryFontColor);
+	color: var(--secondaryFontColor);
+	border-style: solid;
+	border-radius: 5px;
+}
+
+.background-light {
+	background-color: var(--primaryColor);
+	color: var(--secondaryFontColor);
+	border-radius: 15px;
+}
+
+.accepted-offers {
+	display: none;
+}

@@ -1,0 +1,50 @@
+/* css for admin-sign-in.html */
+
+.content-container {
+	min-height: calc(
+		100vh - 150px - 125px - var(--footerHeight) - 20px
+	) !important;
+}
+
+.adminSignIn img {
+	display: block;
+	margin: 0 auto;
+	height: 125px;
+	margin-top: 150px;
+}
+
+form,
+.signInOr,
+.signInJoinWith {
+	width: 420px;
+	margin: auto;
+}
+
+.submit {
+	background: var(--primaryColor) !important;
+	width: 50%;
+	border: 0;
+	height: var(--standardHeight);
+	height: 100%;
+}
+
+@media handheld and (max-width: 576px),
+	screen and (max-device-width: 576px),
+	screen and (max-width: 576px) {
+	form,
+	.signInOr,
+	.signInJoinWith {
+		width: 80%;
+	}
+
+	.content-container {
+		min-height: calc(
+			100vh - 100px - 100px - var(--footerHeight) - 20px
+		) !important;
+	}
+
+	.adminSignIn img {
+		height: 100px;
+		margin-top: 100px;
+	}
+}

@@ -1,0 +1,231 @@
+<div>
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="./company-main"
+					><span class="logoTitleHeader"
+						><img src="../../../assets/images/logo.svg" alt="logo" /></span
+				></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a class="nav-link" href="./job-preview" aria-current="page"
+								><b>Edit job offers</b></a
+							>
+						</li>
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a class="nav-link" href="./company-profile" aria-current="page"
+								><b>Profile</b></a
+							>
+						</li>
+						<li class="nav-item ms-3 mb-2 mb-lg-0">
+							<a href="./" (click)="onSignOut()" class="signOut btn btn-primary"
+								>Sign Out</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Header -->
+
+	<div class="container input-form">
+		<form>
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<label for="company-name" class="form-label">Company name</label>
+					<input
+						id="company-name"
+						disabled="true"
+						[placeholder]="user.username"
+						name="username"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-6 mb-3">
+					<label for="email" class="form-label">E-mail</label>
+					<input
+						id="email"
+						name="email"
+						[placeholder]="user.email"
+						disabled="true"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-6 mb-3">
+					<label for="country" class="form-label">Country</label>
+					<input
+						id="country"
+						name="country"
+						[placeholder]="user.country"
+						disabled="true"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-6 mb-3">
+					<label for="phone" class="form-label">Phone</label>
+					<input
+						id="phone"
+						name="phone"
+						[placeholder]="user.phone"
+						disabled="true"
+						type="text"
+						class="form-control"
+					/>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Job title
+						</label
+					>
+					<textarea
+						ng-model="title"
+						required
+						id="title"
+						name="title"
+						rows="1"
+						type="text"
+						class="form-control"
+						ng-init="title= 'initvalue'"
+						[(ngModel)]="job.title"
+						>{{ job.title }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Job description
+						</label
+					>
+					<textarea
+						ng-model="description"
+						required
+						id="description"
+						name="description"
+						rows="5"
+						type="text"
+						class="form-control"
+						ng-init="description= 'initvalue'"
+						[(ngModel)]="job.description"
+						>{{ job.description }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Job expectations
+						</label
+					>
+					<textarea
+						ng-model="expectations"
+						required
+						id="expectations"
+						name="expectations"
+						rows="5"
+						type="text"
+						class="form-control"
+						ng-init="expectations= 'initvalue'"
+						[(ngModel)]="job.expectations"
+						>{{ job.expectations }}</textarea
+					>
+				</div>
+				<div class="col-md-12 mb-3">
+					<label for="contact-info" class="form-label"
+						>Other
+						</label
+					>
+					<textarea
+						ng-model="other"
+						required
+						id="other"
+						name="other"
+						rows="5"
+						type="text"
+						class="form-control"
+						ng-init="other= 'initvalue'"
+						[(ngModel)]="job.other"
+						>{{ job.other }}</textarea
+					>
+				</div>
+				<div class="col-md-12">
+					<button
+						id="generateJob"
+						type="button"
+						class="btn btn-primary"
+						(click)="submit()"
+					>
+						Generate job offer
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="preview-boxes container">
+		<div class="container">
+			<div class="row job-preview-box-1">
+				<div class="col-md-6 poster-contact">
+					<div>
+						<p>Company name</p>
+						<h4>{{ user.username }}</h4>
+					</div>
+					<div>
+						<p>Email</p>
+						<h4>{{ user.email }}</h4>
+					</div>
+					<div>
+						<p>Phone number</p>
+						<h4>{{ user.phone }}</h4>
+					</div>
+					<div>
+						<p>Country</p>
+						<h4>{{ user.country }}</h4>
+					</div>
+				</div>
+				<div class="col-md-6 job-preview-box-2">
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Title</strong></label>
+						<p>{{ job.title }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Description</strong></label>
+						<p>{{ job.description }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Expectations</strong></label>
+						<p>{{ job.expectations }}</p>
+					</div>
+					<div class="col-md-12 mb-3">
+						<label class="form-label"><strong>Other</strong></label>
+						<p>{{ job.other }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<a href="./company-main">
+			<span class="logoTitleFooter"
+				><img src="../../../assets/images/logo.svg" alt="logo" /></span
+		></a>
+		&copy;2021
+	</footer>
+	<!-- Footer -->
+	<script src="../../../../assets/scripts/job-preview.js" defer></script>
+</div>

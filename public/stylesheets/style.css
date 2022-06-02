@@ -1,0 +1,116 @@
+/* Global css styles */
+
+/*
+ * X-Small <576px []
+ * Small >=576px [sm]
+ * Medium >=768px [md]
+ * Large >=992px [lg]
+ * Extra large >=1200px [xl]
+ * Extra extra large >=1400 [xxl]
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root {
+	--fontFamily: 'Oxygen', sans-serif;
+	--logoFontFamily: 'Righteous', cursive;
+	--fontSize: 100%;
+	--logoFontSize: 175%;
+	--smallFontSize: 85%;
+	--grayBackground: #eaeaea;
+	--borderColor: #ced4da;
+	--primaryFontColor: #252a34;
+	--secondaryFontColor: #ced4da;
+	--primaryColor: #16396b;
+	--primaryColorLow: #16396b4d;
+	--secondaryColor: #ea2e64;
+	--secondaryColorLow: #ea2e644d;
+	--backgroundColor: #ffffff;
+	--borderRadiusList: 2px;
+	--borderRadiusImg: 50%;
+	--borderRadius: 25px;
+	--standardHeight: 42px;
+	--headerHeight: 100px;
+	--footerHeight: 50px;
+	--cardSize: 70vh;
+}
+
+body {
+	font-family: var(--fontFamily) !important;
+	background-color: var(--backgroundColor);
+}
+
+.content-container {
+	min-height: calc(
+		100vh - var(--headerHeight) - var(--footerHeight) - 20px
+	) !important;
+}
+
+input {
+	background: var(--backgroundColor) !important;
+	border: 1px solid var(--borderColor) !important;
+	text-align: center;
+	height: var(--standardHeight);
+}
+
+.btn {
+	box-shadow: none !important;
+}
+
+input:focus {
+	box-shadow: none !important;
+	border: 1px solid var(--borderColor) !important;
+	text-align: center;
+	height: var(--standardHeight);
+}
+
+textarea {
+	background: var(--backgroundColor) !important;
+	border: 1px solid var(--borderColor) !important;
+}
+
+textarea:focus {
+	box-shadow: none !important;
+}
+
+header {
+	width: 100%;
+	padding: 10px;
+	height: var(--headerHeight);
+	color: var(--primaryFontColor);
+}
+
+button:focus {
+	box-shadow: none !important;
+}
+
+.collapse {
+	z-index: 3;
+}
+
+footer {
+	width: 100%;
+	height: var(--footerHeight);
+	padding: 10px;
+	text-align: center;
+	color: var(--primaryFontColor);
+	font-size: var(--fontSize) !important;
+}
+
+.logoTitleHeader img {
+	height: 70px;
+}
+
+.logoTitleFooter img {
+	height: 25px;
+}
+
+.headerOptions {
+	font-size: var(--headerFontSize);
+}
+
+.headerCollapseOptions {
+	background-color: white;
+}

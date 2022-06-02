@@ -1,0 +1,129 @@
+.signOut {
+	background: var(--primaryColor) !important;
+	border: 0;
+	height: var(--standardHeight);
+}
+
+.chatIcons {
+	background: var(--primaryColor) !important;
+	border: 0;
+	width: 75%;
+	height: var(--standardHeight);
+}
+
+.chat-history {
+	height: calc(100vh - 405px);
+	overflow-x: auto;
+}
+.chat-list {
+	height: calc(100vh - 240px);
+	overflow-x: auto;
+}
+
+.jobs-list .chat-list .list-group-item {
+	border: 1px solid var(--borderColor);
+	border-radius: var(--borderRadiusList);
+}
+
+.jobs-list .chat-list .list-group-item .name {
+	max-width: 200px;
+}
+
+.jobs-list .chat-list .list-group-item:hover {
+	background: var(--primaryColorLow);
+	cursor: pointer;
+}
+
+.jobs-list .chat-list .list-group-item img {
+	width: 45px;
+	border-color: var(--borderColor);
+	border-radius: var(--borderRadiusImg);
+}
+
+.jobs-list .chat-list div.active {
+	background: var(--primaryColorLow);
+	color: var(--fontColor);
+	border-color: var(--borderColor);
+	font-weight: bold;
+}
+.chat .chat-header .list-group-item {
+	border-color: var(--borderColor);
+	border-radius: var(--borderRadiusList);
+	margin-bottom: 0px !important;
+}
+
+.chat .chat-header img {
+	width: 60px;
+	border-radius: var(--borderRadiusImg);
+}
+
+.chat .chat-history .message-data-time {
+	color: var(--fontColor);
+	font-size: var(--smallFontSize);
+}
+
+.chat .chat-history .message {
+	max-width: 500px;
+	color: var(--fontColor);
+	border-color: var(--borderColor);
+	border-radius: 7px;
+	display: inline-block;
+	position: relative;
+}
+
+.chat .chat-history .my-message {
+	background: var(--primaryColorLow);
+}
+
+.chat .chat-history .other-message {
+	background: var(--secondaryColorLow);
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: flexbox;
+	font-size: 0;
+	content: ' ';
+	clear: both;
+	height: 0;
+}
+
+@media handheld and (max-width: 767px),
+	screen and (max-device-width: 767px),
+	screen and (max-width: 767px) {
+	.chat-app {
+		width: 90%;
+	}
+	.navbar-collapse {
+		background-color: var(--backgroundColor);
+		text-align: right;
+		z-index: 10;
+		border: 1px solid var(--borderColor);
+		border-radius: 5px;
+	}
+	.navbar-nav {
+		margin: 20px;
+	}
+	.navbar-nav .nav-item {
+		margin: 10px;
+		margin-top: 0px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.chat-list {
+		height: 500px;
+		overflow-x: auto;
+	}
+	.chat-history {
+		height: 500px;
+		overflow-x: auto;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.chat .chat-header img {
+		width: 45px;
+		border-radius: 50%;
+	}
+}

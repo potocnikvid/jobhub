@@ -1,0 +1,59 @@
+<div>
+	<div class="adminSignIn">
+		<img src="../../../assets/images/logo.svg" alt="logo" />
+	</div>
+
+	<!-- Container -->
+	<div class="container-md container-fluid content-container">
+		<div class="row">
+			<div class="col-12 align-content-center pt-3 pb-3">
+				<div class="text-center">
+					<form method="post" autocomplete="off" action="/db-insert">
+						<div class="mb-4">
+							<button
+								type="submit"
+								class="submit btn btn-primary"
+								(click)="insert()"
+							>
+								Insert Data
+							</button>
+						</div>
+					</form>
+					<form method="post" autocomplete="off" action="/db-delete">
+						<div class="mb-4">
+							<button
+								type="submit"
+								class="submit btn btn-primary"
+								(click)="delete()"
+							>
+								Erase Data
+							</button>
+						</div>
+					</form>
+					<form method="post" autocomplete="off" action="/db-reset">
+						<div class="mb-4">
+							<button
+								type="submit"
+								class="submit btn btn-primary"
+								(click)="reset()"
+							>
+								Reset Data
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Container -->
+
+	<!-- Footer -->
+	<footer>
+		<a href="./">
+			<span class="logoTitleFooter"
+				><img src="../../../assets/images/logo.svg" alt="logo" /></span
+		></a>
+		&copy;2021
+	</footer>
+	<!-- Footer -->
+</div>
